@@ -1,0 +1,23 @@
+.dialog a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5em;
+    border-bottom: 2px solid #dfe0e4;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5em;
+}
+
+.dialog a span {
+    font-size: 1.5em;
+    color: #41454c;
+}
+
+.dialog img {
+    height: 5em;
+    border-radius: 50%;
+}
+
+.dialog a.active {
+    background-color: #dee0e3;
+}

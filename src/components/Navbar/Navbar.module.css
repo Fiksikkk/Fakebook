@@ -1,0 +1,47 @@
+.nav {
+    height: 1fr;
+    grid-area: n;
+    background-color: #e9ebee;
+    padding: 1em;
+    padding-top: 0.5em;
+}
+
+
+.avatar img {
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+.navButton {
+    padding: 0.3em;
+}
+
+.navButton a {
+    display: block;
+    text-decoration: none;
+    padding: 0.3em;
+    font-size: large;
+    color: #565a61;
+}
+
+
+.navButton a.active {
+    border-left: 2px solid #315aad;
+    color: #00020b;
+    background-color: #dee0e3;
+    font-weight: bold;
+
+}
+
+.navLowerButton {
+    margin-top: 1em;
+    padding: 0.3em;
+    background-color: #42b72a;
+    border: none;
+    border-radius: 3px;
+    font-size: large;
+    font-weight: bold;
+    color: #ffffdb;
+}

@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    margin-right: 3.5%;
+    border-left: 2px solid #dfe0e4;
+    border-right: 2px solid #dfe0e4;
+    overflow: overlay;
+    height: 1fr;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+}
