@@ -12,9 +12,10 @@ const Profile = (props) => {
         <div className={s.content}>
             <ProfileInfo/>
             <ProfileNavbar/>
-            <Status addPost={props.addPost}
+            <Status 
                     newPostText={props.data.newPostText}
-                    updateNewPostText={props.updateNewPostText}/>
+                    dispatch={props.dispatch}
+            />
             <MyPosts data={props.data}/>
         </div>
     );

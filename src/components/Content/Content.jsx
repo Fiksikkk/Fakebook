@@ -13,7 +13,9 @@ const Content = (props) => {
                         data={props.state.profilePage}
                         dispatch={props.dispatch} /> } />
                 <Route path={'/messages/*'}
-                    element={<Messages data={props.state.messagesPage} />} />
+                    element={<Messages 
+                        data={props.state.messagesPage}
+                        dispatch={props.dispatch} />} />
             </Routes>
         </div>
     );
