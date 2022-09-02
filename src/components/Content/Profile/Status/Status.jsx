@@ -2,17 +2,15 @@ import s from "./Status.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPencil } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { addPostActionCreater, updateNewPostTextActionCreater } from "../../../../redux/profileReducer";
 
 const Status = (props) => {
     let newPostElement = React.createRef();
 
-    let addNewPost = () => props.dispatch(addPostActionCreater());
+    let onAddPost = () => props.addNewPost();
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        let action = updateNewPostTextActionCreater(text);
-        props.dispatch(action);
+        props.updateNewPostTextActionCreater(text);
     }
 
     return (
@@ -21,10 +19,10 @@ const Status = (props) => {
                 <div>
                     <textarea ref={newPostElement}
                         onChange={onPostChange}
-                        value={props.newPostText}
+                        value={props.data.newPostText}
                         placeholder='New Post Text' />
                 </div>
-                <button onClick={addNewPost}>
+                <button onClick={onAddPost}>
                     <FontAwesomeIcon className={s.icon} icon={faPencil} />
                     Add new post
                 </button>

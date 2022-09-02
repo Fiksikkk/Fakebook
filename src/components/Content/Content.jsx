@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import React from "react";
 import Profile from "./Profile/Profile";
-import Messages from "./Messages/Messages";
+import MessagesContainer from "./Messages/MessagesContainer";
 import s from './Content.module.css';
 
 const Content = (props) => {
@@ -9,13 +9,14 @@ const Content = (props) => {
         <div className={s.content}>
             <Routes>
                 <Route path={'/profile'}
-                    element={<Profile 
+                    element={<Profile
+                        store={props.store} 
                         data={props.state.profilePage}
-                        dispatch={props.dispatch} /> } />
+                         /> } />
                 <Route path={'/messages/*'}
-                    element={<Messages 
-                        data={props.state.messagesPage}
-                        dispatch={props.dispatch} />} />
+                    element={<MessagesContainer 
+                        store={props.store}
+                         />} />
             </Routes>
         </div>
     );

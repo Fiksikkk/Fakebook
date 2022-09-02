@@ -9,8 +9,10 @@ const App = (props) => {
         <div className='appWrapper'>
             <Header/>
             <Navbar/>
-            <Content state={props.state}
-                     dispatch={props.dispatch} />
+            <Content
+                store={props.store} 
+                state={props.state}
+                dispatch={props.dispatch} />
         </div>
     );
 }
