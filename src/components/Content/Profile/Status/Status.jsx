@@ -2,8 +2,7 @@ import s from "./Status.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPencil } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import { addPostActionCreater } from "../../../../redux/state";
-import { updateNewPostTextActionCreater } from "../../../../redux/state";
+import { addPostActionCreater, updateNewPostTextActionCreater } from "../../../../redux/profileReducer";
 
 const Status = (props) => {
     let newPostElement = React.createRef();
