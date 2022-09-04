@@ -8,29 +8,27 @@ let initialState = {
         { id: 3, name: "Kryaken", avatar: `https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg` }
     ],
     messagesData: [
-        { message: "HI!" },
-        { message: "How are you" },
-        { message: "Yo" }
+        { id: 1, message: "HI!" },
+        { id: 2, message: "How are you" },
+        { id: 3, message: "Yo" }
     ],
     newMessageText: ''
 }
 const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE: {
-            let newMessage = {
-                message: state.newMessageText
+        case SEND_MESSAGE:
+            let text = state.newMessageText;
+            let newId = state.messagesData.length + 1;
+            return {
+                ...state,
+                newMessageText: '',
+                messagesData: [...state.messagesData, {id: newId, message: text }]
             }
-            let stateCopy = { ...state };
-            stateCopy.messagesData = [...state.messagesData]
-            stateCopy.messagesData.push(newMessage);
-            stateCopy.newMessageText = '';
-            return stateCopy;
-        }
-        case UPDATE_MESSAGE_TEXT: {
-            let stateCopy = { ...state };
-            stateCopy.newMessageText = action.newMessageText;
-            return stateCopy;
-        }
+        case UPDATE_MESSAGE_TEXT:
+            return {
+                ...state,
+                newMessageText: action.newMessageText
+            }
         default:
             return state;
     }
