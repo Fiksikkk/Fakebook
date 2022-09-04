@@ -10,10 +10,6 @@ const App = (props) => {
             <Header/>
             <Navbar/>
             <Content/>
-                {/* // store={props.store} 
-                // state={props.state}
-                // dispatch={props.dispatch} 
-                // /> */}
         </div>
     );
 }
