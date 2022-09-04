@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <header className={s.header}>
             <div className={s.search}>
-                <div className={s.logo}>
+                <div className={s.logo}> 
                     <FontAwesomeIcon className={s.fa} icon={faFacebookSquare} size='2x' />
                 </div>
                 <div className={s.fbSearch}>

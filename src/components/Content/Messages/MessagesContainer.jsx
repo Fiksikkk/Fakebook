@@ -1,25 +1,48 @@
 import React from "react";
-import { updateMessageTextActionCreater, sendMessageActionCreater} from "../../../redux/messagesReducer";
+import { updateMessageTextActionCreater, sendMessageActionCreater } from "../../../redux/messagesReducer";
 import Messages from "./Messages";
+import { connect } from "react-redux";
 
 
-const MessagesContainer = (props) => {
-    let data = props.store.getState().messagesPage;
+// const MessagesContainer = (props) => {
 
-    let onSendMessageClick = () => {
-        props.store.dispatch(sendMessageActionCreater());
+//     return <StoreContext.Consumer>
+//         { store => {
+//                 let data = store.getState().messagesPage;
+//                 let onSendMessageClick = () => {
+//                     store.dispatch(sendMessageActionCreater());
+//                 }
+//                 let onNewMessageChange = (text) => {
+//                     store.dispatch(updateMessageTextActionCreater(text))
+//                 }
+
+//                 return <Messages
+//                     updateNewMessageText={onNewMessageChange}
+//                     sendMessage={onSendMessageClick}
+//                     data={data}
+//                 />
+//             }
+//         }
+//     </StoreContext.Consumer>
+// }
+
+
+let mapStateToProps = (state) => {
+    return {
+        data: state.messagesPage
     }
-    let onNewMessageChange = (text) => {
-        props.store.dispatch(updateMessageTextActionCreater(text))
-    }
-
-    return (
-        <Messages
-            updateNewMessageText={onNewMessageChange}
-            sendMessage={onSendMessageClick}
-            data={data}
-        />
-    )
 }
+let mapDispatchToProps = (dispatch) => {
+    return {
+        updateNewMessageText: (text) => {
+            dispatch(updateMessageTextActionCreater(text))
+        },
+        sendMessage: () => {
+            dispatch(sendMessageActionCreater());
+        }
+    }
+}
+
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
 
 export default MessagesContainer;

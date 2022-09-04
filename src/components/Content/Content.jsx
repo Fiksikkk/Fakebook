@@ -10,12 +10,12 @@ const Content = (props) => {
             <Routes>
                 <Route path={'/profile'}
                     element={<Profile
-                        store={props.store} 
-                        data={props.state.profilePage}
+                        // store={props.store} 
+                        // data={props.state.profilePage}
                          /> } />
                 <Route path={'/messages/*'}
                     element={<MessagesContainer 
-                        store={props.store}
+                        // store={props.store}
                          />} />
             </Routes>
         </div>
