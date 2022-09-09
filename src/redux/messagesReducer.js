@@ -1,11 +1,13 @@
+import avatar from "../assets/Images/avatarForMessage.jpg"
+
 const SEND_MESSAGE = 'SEND-MESSAGE';
 const UPDATE_MESSAGE_TEXT = 'UPDATE-MESSAGE-TEXT';
 
 let initialState = {
     dialogsData: [
-        { id: 1, name: "Sasha", avatar: `https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg` },
-        { id: 2, name: "Pasha", avatar: `https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg` },
-        { id: 3, name: "Kryaken", avatar: `https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg` }
+        { id: 1, name: "Sasha", avatar: avatar },
+        { id: 2, name: "Pasha", avatar: avatar },
+        { id: 3, name: "Kryaken", avatar: avatar }
     ],
     messagesData: [
         { id: 1, message: "HI!" },

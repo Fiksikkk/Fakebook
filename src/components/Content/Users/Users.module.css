@@ -1,8 +1,55 @@
-.avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+/* .container {} */
+
+.user {
+    margin: 0 2em 0.5em 2em;
+    padding: 0.5em 2em;
+    display: flex;
+    border: 2px solid #dee0e3;
+    border-radius: 10px;
 }
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    padding: 0.5em 1em;
+    display: grid;
+    grid-template-rows: 4.2fr 1fr;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 5%;
+}
+
 .selectedPage {
     font-weight: bold;
 }
+
+/* .followButtonContainer {} */
+
+.followButton,
+.unFollowButton {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border: none;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+.unFollowButton {
+    background-color: #c7c7c7;
+}
+
+.followButton {
+    background-color: #3b5998;
+}
+
+.pages {
+    margin: 1em;
+}
+

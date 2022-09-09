@@ -10,14 +10,10 @@ const Profile = (props) => {
 
     return (
         <div className={s.content}>
-            <ProfileInfo />
-            <ProfileNavbar />
-            <StatusContainer
-            // store={props.store}
-            />
-            <MyPostsContainer
-            // data={props.data}
-            />
+            <ProfileInfo profile={props.profile}/>
+            {/* <ProfileNavbar /> */}
+            <StatusContainer />
+            <MyPostsContainer />
         </div>
     );
 }
