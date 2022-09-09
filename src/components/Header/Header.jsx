@@ -8,15 +8,17 @@ import {
     faLock,
     faMagnifyingGlass,
     faMessage,
+    faRightToBracket,
     faUserGroup
 } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
+import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className={s.header}>
             <div className={s.search}>
-                <div className={s.logo}> 
+                <div className={s.logo}>
                     <FontAwesomeIcon className={s.fa} icon={faFacebookSquare} size='2x' />
                 </div>
                 <div className={s.fbSearch}>
@@ -38,9 +40,11 @@ const Header = () => {
                 <FontAwesomeIcon className={s.icon} icon={faMessage} />
                 <FontAwesomeIcon className={s.icon} icon={faEarth} />
             </div>
-            <div className={s.settings}>
-                <FontAwesomeIcon className={s.icon} icon={faLock} />
-                <FontAwesomeIcon className={s.icon} icon={faCaretDown} />
+            <div className={s.loginBlock}>
+                { props.isAuth ? props.login :
+                <NavLink to={'/login'}>
+                    <FontAwesomeIcon className={s.icon} icon={faRightToBracket} />
+                </NavLink> }
             </div>
         </header>
     );

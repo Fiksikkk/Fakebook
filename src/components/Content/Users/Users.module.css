@@ -52,4 +52,7 @@
 .pages {
     margin: 1em;
 }
+.pages span {
+    margin: 0.1em;
+}
 

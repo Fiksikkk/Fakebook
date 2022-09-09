@@ -9,7 +9,6 @@ const Content = (props) => {
     return (
         <div className={s.content}>
             <Routes>
-                {/* <Route path={'/profile/*'} */}
                 <Route path={'/profile'}
                     element={<ProfileContainer />}>
                     <Route path=":userId" 

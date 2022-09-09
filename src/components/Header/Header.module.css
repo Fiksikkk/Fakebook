@@ -88,11 +88,15 @@
     color: white;
 }
 
-.settings {
+.loginBlock {
     display: flex;
     float: left;
     align-items: center;
     gap: 0.5em;
+}
+
+.loginBlock a svg:hover {
+    color: white;
 }
 
 .logo {
