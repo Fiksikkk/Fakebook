@@ -4,6 +4,7 @@ import MessagesContainer from "./Messages/MessagesContainer";
 import s from './Content.module.css';
 import UsersContainer from "./Users/UsersContainer";
 import ProfileContainer from "./Profile/ProfileContainer";
+import LoginPage from "./Login/Login";
 
 const Content = (props) => {
     return (
@@ -18,6 +19,8 @@ const Content = (props) => {
                     element={<MessagesContainer />} />
                 <Route path={'/users'}
                     element={<UsersContainer />} />
+                <Route path={'/login'}
+                    element={<LoginPage />} />
             </Routes>
         </div>
     );

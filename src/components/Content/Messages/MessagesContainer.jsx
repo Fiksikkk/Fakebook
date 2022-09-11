@@ -4,32 +4,10 @@ import Messages from "./Messages";
 import { connect } from "react-redux";
 
 
-// const MessagesContainer = (props) => {
-
-//     return <StoreContext.Consumer>
-//         { store => {
-//                 let data = store.getState().messagesPage;
-//                 let onSendMessageClick = () => {
-//                     store.dispatch(sendMessageActionCreater());
-//                 }
-//                 let onNewMessageChange = (text) => {
-//                     store.dispatch(updateMessageTextActionCreater(text))
-//                 }
-
-//                 return <Messages
-//                     updateNewMessageText={onNewMessageChange}
-//                     sendMessage={onSendMessageClick}
-//                     data={data}
-//                 />
-//             }
-//         }
-//     </StoreContext.Consumer>
-// }
-
-
 let mapStateToProps = (state) => {
     return {
-        data: state.messagesPage
+        data: state.messagesPage,
+        isAuth: state.auth.isAuth
     }
 }
 let mapDispatchToProps = (dispatch) => {
