@@ -20,18 +20,14 @@ export const usersAPI = {
     follow(id) {
         return instance.post(`follow/${id}`)
             .then(responce => responce.data);
-    }
-}
-
-
-export const profileAPI = {
+    },
     getUserInfo(userId) {
         return instance.get(`profile/` + userId)
             .then(responce => responce.data);
     }
 }
 
-export const headerAPI = {
+export const authAPI = {
     getAuthUserData() {
         return instance.get(`auth/me`)
             .then(responce => responce.data);
